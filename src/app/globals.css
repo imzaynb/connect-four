@@ -4,24 +4,49 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-rgb: 19, 29, 42;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.red {
+  @apply text-red-950 bg-red-200
+}
+
+.red__selected {
+  @apply text-black bg-red-400
+}
+
+.red__won {
+  @apply text-white bg-red-600 rounded-full
+}
+
+.yellow {
+  @apply text-yellow-950 bg-yellow-200
+}
+
+.yellow__selected {
+  @apply text-black bg-yellow-400
+}
+
+.yellow__won {
+  @apply text-white bg-yellow-600 rounded-full 
+}
+
+.none {
+  @apply text-black bg-white
+}
+
+.none__selected {
+  @apply text-black bg-gray-200
 }
